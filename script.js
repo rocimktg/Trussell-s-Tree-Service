@@ -312,19 +312,8 @@ function initStatCounters() {
 }
 
 function initGalleryParallax() {
-  if (prefersReducedMotion || !window.matchMedia('(hover: hover)').matches) return;
-
   document.querySelectorAll('.gallery-item').forEach((item) => {
-    item.addEventListener('mousemove', (event) => {
-      const rect = item.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-      item.style.transform = `perspective(800px) rotateX(${(-y * 8).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg)`;
-    });
-
-    item.addEventListener('mouseleave', () => {
-      item.style.transform = '';
-    });
+    item.style.transform = '';
   });
 }
 

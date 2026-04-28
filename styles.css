@@ -242,7 +242,7 @@ main {
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
-  padding: 12px 0;
+  height: var(--nav-height);
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
@@ -255,6 +255,7 @@ main {
 
 .nav-inner {
   width: min(calc(100% - 2rem), 1260px);
+  height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -269,6 +270,8 @@ main {
 .nav-logo img {
   height: 80px;
   width: auto;
+  transform: scale(1.25);
+  transform-origin: left center;
 }
 
 .footer-logo img {
@@ -827,6 +830,12 @@ main {
   padding-top: 5rem;
 }
 
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
 .before-after-card {
   border: 2px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.04);
@@ -835,7 +844,7 @@ main {
 
 .before-after-slider {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1153 / 2048;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.18);
   background: #111;
@@ -1319,15 +1328,6 @@ main {
     color: var(--white);
   }
 
-
-  .lightbox-close:hover,
-  .lightbox-prev:hover,
-  .lightbox-next:hover,
-  .modal-close:hover {
-    background: var(--white);
-    color: var(--charcoal);
-  }
-
   #mobile-call-bar a:hover {
     background: rgba(255, 255, 255, 0.08);
   }
@@ -1375,6 +1375,7 @@ main {
   .services-grid,
   .reviews-grid,
   .about-grid,
+  .before-after-grid,
   .who-serve-grid,
   .footer-grid,
   .form-grid {
