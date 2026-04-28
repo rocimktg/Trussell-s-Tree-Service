@@ -558,16 +558,6 @@
     </section>
   </main>
 
-  <div class="pre-footer-cta">
-    <div class="container pre-footer-cta-inner reveal-on-scroll">
-      <div class="pre-footer-copy">
-        <p class="pre-footer-label">Get a Free Estimate</p>
-        <p>No pressure. We'll come take a look and give you a straight quote.</p>
-      </div>
-      <button class="btn btn-primary btn-modal-trigger" type="button">Request an Estimate</button>
-    </div>
-  </div>
-
   <footer id="footer" class="footer">
     <div class="container footer-grid">
       <section class="footer-brand reveal-on-scroll" aria-label="About Trussell's">
@@ -662,27 +652,28 @@
           <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
         </p>
 
-        <div class="form-field">
-          <label for="modal-name">Full Name</label>
-          <input type="text" id="modal-name" name="name" required inputmode="text" autocomplete="name" />
-          <span class="field-error" aria-live="polite"></span>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="modal-name">Full Name</label>
+            <input type="text" id="modal-name" name="name" required inputmode="text" autocomplete="name" />
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="modal-phone">Phone Number</label>
+            <input type="tel" id="modal-phone" name="phone" required inputmode="tel" autocomplete="tel" />
+            <span class="field-error" aria-live="polite"></span>
+          </div>
         </div>
 
-        <div class="form-field">
-          <label for="modal-phone">Phone Number</label>
-          <input type="tel" id="modal-phone" name="phone" required inputmode="tel" autocomplete="tel" />
-          <span class="field-error" aria-live="polite"></span>
-        </div>
-
-        <div class="form-field">
-          <label for="modal-email">Email Address</label>
-          <input type="email" id="modal-email" name="email" required inputmode="email" autocomplete="email" />
-          <span class="field-error" aria-live="polite"></span>
-        </div>
-
-        <div class="form-field">
-          <label for="modal-service">Service Needed</label>
-          <select id="modal-service" name="service" required>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="modal-email">Email Address</label>
+            <input type="email" id="modal-email" name="email" required inputmode="email" autocomplete="email" />
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="modal-service">Service Needed</label>
+            <select id="modal-service" name="service" required>
             <option value="" selected disabled>Select a service</option>
             <option value="tree-removal">Tree Removal</option>
             <option value="tree-trimming">Tree Trimming</option>
@@ -692,6 +683,7 @@
             <option value="other">Other</option>
           </select>
           <span class="field-error" aria-live="polite"></span>
+          </div>
         </div>
 
         <div class="form-field">
